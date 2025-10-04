@@ -1,5 +1,7 @@
 語言：[简体中文](./README-CHS.md) | *繁體中文*
 
+> 該倉庫僅限考古之用途。此乃威注音輸入法 macOS 版最開始的倉庫，保留了從威注音 1.0 到 2.9.5 版的完整開發歷史。但這個倉庫並不包含對 2022 年三月為止的小麥注音開發歷程。該倉庫目前封存處理、僅作考古之用途。威注音輸入法現在的主倉庫是 [vChewing/vChewing-macOS](https://github.com/vChewing/vChewing-macOS) 。
+
 僅以此 README 紀念祁建華 (CHIEN-HUA CHI, 1921-2001)。
 
 ---
