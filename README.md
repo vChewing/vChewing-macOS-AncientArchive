@@ -1,19 +1,17 @@
-語言：[简体中文](./README-CHS.md) | *繁體中文*
+# vChewing 威注音輸入法（4.1.2 版為止的主流發行版原始碼封存倉庫）
 
-僅以此 README 紀念祁建華 (CHIEN-HUA CHI, 1921-2001)。
+> 該倉庫目前封存處理、僅限考古之用途。此乃威注音輸入法 macOS 版最開始的倉庫，保留了從威注音 1.0 到 3.9.0 版的完整開發歷史。
+>
+> 「威注音輸入法」最早期的 1.x 版本是從小麥注音輸入法 1.1.0 分支而出、且**在小麥注音輸入法 2.2.2 版為止持續同步了一些內容。
+> - 截至小麥注音輸入法 1.1.0 ~ 2.2.2 版為止這部份的 commit 沒有體現在本倉庫內，其中有大量的 Zonble 的 commit，只是在之後威注音輸入法 2.x 中後期版本又被移除了。**Zonble 的這些 commit 對小麥注音輸入法自身的開發歷史而言是非常重要的一環**，相關 commit 歷史（`6d610a7 ... cc91a35`）可在[小麥注音 macOS 版的倉庫](http://github.com/openvanilla/McBopomofo/compare/6d610a717d853ce4e4fcda0682bfbfa80c95a4f6...cc91a351d929705a58ac27f63ffcc273c61af0f4)查看。
+>
+> 威注音輸入法現在的主倉庫是 [vChewing/vChewing-macOS](https://github.com/vChewing/vChewing-macOS)、且已更名為「唯音輸入法」、不再包含小麥注音的內容。這些內容並不是一下子就移除的，而是經過積年累月的版本迭代的重寫過程。
 
 ---
 
 有關該倉庫及該輸入法的最新資訊，請洽產品主頁：https://vchewing.github.io/
 
-因不可控原因，該倉庫只能保證在 Gitee 有最新的內容可用：
-
-- 下載：https://gitee.com/vchewing/vChewing-macOS/releases
-- 程式碼倉庫：https://gitee.com/vchewing/vChewing-macOS
-
-# vChewing 威注音輸入法
-
-威注音輸入法最開始是基於小麥注音二次開發的，是**原生簡體中文、原生繁體中文注音輸入法**：
+威注音輸入法是**原生簡體中文、原生繁體中文注音輸入法**：
 
 - 威注音是業界現階段支援注音排列種類數量與輸入用拼音種類數量最多的注音輸入法。
   - 受威注音自家的鐵恨注音並擊引擎加持。
@@ -65,6 +63,8 @@ P.S.: 威注音輸入法的 Shift 按鍵監測功能僅藉由對 NSEvent 訊號�
 
 ## 建置流程
 
+> 此部分的內容僅作備忘之用途，並不對外保證 compilability。
+
 安裝 Xcode 之後，請先配置 Xcode 允許其直接構建在專案所在的資料夾下的 build 資料夾內。步驟：
 ```
 「Xcode」->「Preferences...」->「Locations」；
@@ -97,26 +97,5 @@ P.S.: 威注音輸入法的 Shift 按鍵監測功能僅藉由對 NSEvent 訊號�
 - 威注音詞庫由 Shiki Suen 維護，以 3-Clause BSD License 授權釋出。其中的詞頻資料[由 NAER 授權用於非商業用途](https://twitter.com/ShikiSuen/status/1479329302713831424)。
 
 使用者可自由使用、散播本軟體，惟散播時必須完整保留版權聲明及軟體授權、且「一旦經過修改便不可以再繼續使用威注音的產品名稱」。換言之，這條相對上游 MIT 而言新增的規定就是：你 Fork 可以，但 Fork 成單獨發行的產品名稱時就必須修改產品名稱。這條新增規定對 OpenVanilla 與威注音雙方都有益，免得各自的旗號被盜版下載販子等挪用做意外用途。
-
-## 資料來源
-
-原廠詞庫主要詞語資料來源：
-
-- 《重編國語辭典修訂本 2015》的六字以內的詞語資料 (CC BY-ND 3.0)。
-- 《CNS11643中文標準交換碼全字庫(簡稱全字庫)》 (OGDv1 License)。
-- LibTaBE (by Pai-Hsiang Hsiao under 3-Clause BSD License)。
-- [《新加坡華語資料庫》](https://www.languagecouncils.sg/mandarin/ch/learning-resources/singaporean-mandarin-database)。
-- 原始詞頻資料取自 NAER，有經過換算處理與按需調整。
-    - 威注音並未使用由 LibTaBE 內建的來自 Sinica 語料庫的詞頻資料。
-- 威注音語彙庫作者自行維護新增的詞語資料，包括：
-    - 盡可能所有字詞的陸規審音與齊鐵恨廣播讀音。
-    - 中國大陸常用資訊電子術語等常用語，以確保簡體中文母語者在使用輸入法時不會受到審音差異的困擾。
-- 其他使用者建議收錄的資料。
-
-## 參與研發時的注意事項
-
-歡迎參與威注音的研發。論及相關細則，請洽該倉庫內的「[CONTRIBUTING.md](./CONTRIBUTING.md)」檔案、以及《[常見問題解答](./FAQ.md)》。
-
-敝專案採用了《[貢獻者品行準則承約書 v2.1](./code-of-conduct.md)》。考慮到上游鏈接給出的中文版翻譯與英文原文嚴重不符合的情況（會出現因執法與被執法雙方的認知偏差導致的矛盾，非常容易變成敵我矛盾），敝專案使用了自行翻譯的版本、且新增了一些能促進雙方共識的註解。
 
 $ EOF.
